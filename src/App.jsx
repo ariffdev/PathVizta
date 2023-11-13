@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Content from "./components/Content";
 
 const App = () => {
   if(window.innerWidth < 1000){
@@ -11,6 +12,7 @@ const App = () => {
     return(
       <div className="App">
         <Header/>
+        <Content/>
       </div>
     )
   }

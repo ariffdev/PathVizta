@@ -18,6 +18,10 @@
   /* Colors */
   --dark-color: #34495E;
   --light-color: white;
+
+  /*Dimensions */
+  --header-height: 7vh;
+  --main-height: calc(100vh - var(--header-height));
 }
 
 

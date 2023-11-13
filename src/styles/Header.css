@@ -1,7 +1,7 @@
 header{
   background-color: var(--dark-color);
   color: var(--light-color);
-  height: 7vh;
+  height: var(--header-height);
 
   display: flex;
   align-items: center;
@@ -10,6 +10,6 @@ header{
 }
 
 .app-title{
-  font-size: 1.15rem;
+  font-size: 1.20rem;
   font-weight: bold;
 }
