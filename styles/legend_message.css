@@ -1,0 +1,17 @@
+.legend-and-message-area {
+  height: 12vh;
+  /* Percentage of parent container (main / Content.jsx) */
+  background-color: lightpink;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.15rem;
+}
+
+.legend, .message-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
