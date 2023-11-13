@@ -1,0 +1,11 @@
+
+.legend {
+  height: 10%; /* Percentage of parent container (main / Content.jsx) */
+  background-color: lightpink;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.15rem;
+}

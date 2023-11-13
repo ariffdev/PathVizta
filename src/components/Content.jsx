@@ -1,15 +1,12 @@
 import '../styles/Content.css'
+import Legend from './Legend';
+import WorldGrid from './WorldGrid'
 
 const Content = () => {
   return(
     <main>
-      <section className="legend">
-        Legend
-      </section>
-
-      <section className='grid-map-container'>
-
-      </section>
+      <Legend/>
+      <WorldGrid/>
     </main>
   )
 }

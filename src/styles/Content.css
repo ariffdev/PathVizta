@@ -4,18 +4,4 @@ main{
 }
 
 
-.legend{
-  height: 10%;
-  background-color: lightpink;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1.15rem;
-}
-
-.grid-map-container{
-  background-color: lightyellow;
-  height: 90%;
-}
