@@ -1,7 +1,8 @@
 import Header from "./components/Header";
-import Content from "./components/Content";
-import Visualizer from "./visualization/Visualizer";
-import Controller from "./control/Controller"
+import Legend from "./components/Legend";
+import WorldGrid from "./components/WorldGrid"
+import PathfindingVisualizer from "./control/PathfindingVisualizer"
+
 
 const App = () => {
   if(window.innerWidth < 1000){
@@ -12,18 +13,14 @@ const App = () => {
     )
   }else{
     return(
-      <div className="App">
+      <div className="App" id="App">
         {/* Base UI Components */}
         <Header/>
-        <Content/>
+        <Legend/>
 
-        {/* Control Flow Components -> will render nothing but will control the flow of the program */}
-        <Controller/>
-
-
-        {/* Visualization Engine */}
-        <Visualizer/>
-
+        {/* Main Application */}
+        <WorldGrid/>
+        {/* <PathfindingVisualizer/> */}
       </div>
     )
   }

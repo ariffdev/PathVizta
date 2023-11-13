@@ -1,6 +1,6 @@
 
 .legend {
-  height: 10%; /* Percentage of parent container (main / Content.jsx) */
+  height: 8vh;
   background-color: lightpink;
 
   display: flex;
