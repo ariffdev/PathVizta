@@ -1,1 +1,15 @@
+header{
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  height: 7vh;
 
+  display: flex;
+  align-items: center;
+  
+  padding-left: 20px;
+}
+
+.app-title{
+  font-size: 1.15rem;
+  font-weight: bold;
+}
