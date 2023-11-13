@@ -33,3 +33,7 @@ function renderWorldGrid(worldGridContainer, rows, columns, gridSquareSize){
     }
   }
 }
+
+export function readWorldGridState(){
+//Continue from here
+}
