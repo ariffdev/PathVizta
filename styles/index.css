@@ -8,6 +8,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  border-collapse: collapse;
 
   /* EB Garamond Font Setup -> placed here for reference */
   font-family: 'EB Garamond', serif;
@@ -16,13 +17,15 @@
   font-family: 'Lato', sans-serif;
 
   /* Colors */
-  --dark-color: #34495E;
-  --light-color: white;
+  --dark-blue: #34495E;
+  --darker-blue: #0C151D;
+  --light-blue: #4D6A99;
 
   /*Dimensions */
   --header-height: 7vh;
   --main-height: calc(100vh - var(--header-height));
 }
+
 
 
 /* Default Styling for Mobile Devices */
@@ -35,6 +38,6 @@
   font-weight: bold;
   font-size: 1.5rem;
 
-  background-color: var(--dark-color);
+  background-color: var(--darker-blue);
   color: var(--light-color);
 }

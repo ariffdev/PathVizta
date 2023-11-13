@@ -1,14 +1,20 @@
 .world-grid-container {
-  background-color: lightyellow;
-  height: 81vh;
+  height: 80vh;
   padding: 15px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 
 .world-grid{
+  display: grid;
+}
 
+.grid-item{
+  border: solid 0.1px lightblue;
+  height: 30px;
+  width: 30px;
 }
