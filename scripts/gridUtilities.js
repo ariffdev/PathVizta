@@ -37,6 +37,7 @@ function createWorldGridStructure(rows, columns){
   for (let row = 0; row < rows; row++) {
     worldGridArray.push(Array(columns).fill(0));
   }
+  return worldGridArray;
 }
 
 // Function for reading the current world grid state
