@@ -8,5 +8,5 @@ const grid_parameters = {
   'gridSquareSize': 30 //px
 }
 
-//blockMobile();
+//blockMobile(); // Block functionality on mobile devices
 let worldGridState = generateWorldGrid(grid_parameters.rows, grid_parameters.columns, grid_parameters.gridSquareSize); 
