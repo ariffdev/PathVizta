@@ -1,19 +1,16 @@
 
 
-
+// Function for generating the world grid. Creates and exports the world state and calls another function to render the world grid onto the Document Object Model (DOM)
 export function generateWorldGrid(rows, columns, gridSquareSize){
   // Creating accessor for the grid container
   const worldGridContainer = document.getElementById('world-grid-container');
 
-  let worldGridState = [];
-  for (let row = 0; row < rows; row++) {
-    worldGridState.push(Array(columns).fill(0));
-  }
+  let worldGridState = createWorldGridStructure(rows, columns);
   renderWorldGrid(worldGridContainer, rows, columns, gridSquareSize);
   return worldGridState;
 }
 
-
+// Renders the world grid onto the DOM. To be invoked from the generateWorldGrid function
 function renderWorldGrid(worldGridContainer, rows, columns, gridSquareSize){
   const worldGrid = document.createElement('div');
   worldGrid.setAttribute('class', 'world-grid');
@@ -34,6 +31,19 @@ function renderWorldGrid(worldGridContainer, rows, columns, gridSquareSize){
   }
 }
 
-export function readWorldGridState(){
-//Continue from here
+// Create the structure of the World Grid State
+function createWorldGridStructure(rows, columns){
+  let worldGridArray = [];
+  for (let row = 0; row < rows; row++) {
+    worldGridArray.push(Array(columns).fill(0));
+  }
+}
+
+// Function for reading the current world grid state
+export function readWorldGridState(rows, columns){
+  worldGrid = document.getElementById('world-grid')
+  let currentWorldGridState = createWorldGridStructure(rows, columns);
+
+  //Continue with reading the state into the new variable
+
 }
