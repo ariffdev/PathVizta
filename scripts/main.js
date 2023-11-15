@@ -4,7 +4,7 @@ import {renderWorldGrid, readWorldGridState} from './grid/gridUtilities.js'
 const grid_parameters = {
   //do not exceed 20 rows and 54 columns
   'rows': 20,
-  'columns': 30,
+  'columns': 54,
   'gridSquareSize': 30 //px
 }
 

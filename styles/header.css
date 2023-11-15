@@ -66,13 +66,20 @@ header {
   margin-right: 10px;
 }
 
+#reset-board-btn {
+  background-color: var(--dark-red);
+  margin-right: 10px;
+}
+
+#compare-algos-btn {
+  background-color: var(--yellow);
+}
+
 #visualize-btn:active,
-#reset-board-btn:active {
+#reset-board-btn:active,
+#compare-algos-btn:active {
   background-color: var(--dark-blue);
 }
 
-#reset-board-btn{
-  background-color: var(--dark-red);
-}
 
 
