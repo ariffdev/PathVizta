@@ -6,7 +6,6 @@
 
 /* Import other CSS files*/ 
 @import url('./header.css');
-@import url('./legend_message.css');
 @import url('./worldgrid.css');
 
 /* Basic CSS Reset, Font Setups, Global, and Global CSS Variables */
