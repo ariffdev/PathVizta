@@ -3,8 +3,10 @@ header {
   color: white;
   height: var(--header-height);
 
+
   display: flex;
   align-items: center;
+
 
   padding-left: 20px;
 }
@@ -12,4 +14,19 @@ header {
 .app-title {
   font-size: 1.20rem;
   font-weight: bold;
+  margin-right: 10%;
 }
+
+.control-inputs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#algo-selector,
+#obstacle-pattern-selector,
+#visualization-speed-selector{
+  margin-right: 20px;
+}
+

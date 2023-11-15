@@ -11,6 +11,35 @@
 <body class="App">
   <header>
     <span class="app-title" id="app-title">PathVizta</span>
+
+    <div class="control-inputs">
+      <select name="algo-selector" id="algo-selector">
+        <option value="" disabled selected hidden>Algorithm</option> <!--Setting placeholder but hiding it to make it an unselectable option-->
+        <option value="dijkstra">Dijkstra's</option>
+        <option value="a-star">A*</option>
+        <option value="d*-lite">D* Lite</option>
+      </select>
+
+      <select name="obstacle-pattern-selector" id="obstacle-pattern-selector">
+        <option value="" disabled selected hidden>Obstacle Pattern</option> <!--Setting placeholder but hiding it to make it an unselectable option-->
+        <option value="dijkstra">Dijkstra's</option>
+        <option value="a-star">A*</option>
+        <option value="d*-lite">D* Lite</option>
+      </select>
+
+      <select name="visualization-speed-selector" id="visualization-speed-selector">
+        <option value="" disabled selected hidden>Visualization Speed</option> <!--Setting placeholder but hiding it to make it an unselectable option-->
+        <option value="dijkstra">Dijkstra's</option>
+        <option value="a-star">A*</option>
+        <option value="d*-lite">D* Lite</option>
+      </select>
+
+      <button id="reset-board">Reset Board</button>
+
+    </div>
+
+    
+
   </header>
 
   <section class="legend-and-message-area">
