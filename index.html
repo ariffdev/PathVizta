@@ -22,19 +22,20 @@
 
       <select name="obstacle-pattern-selector" id="obstacle-pattern-selector">
         <option value="" disabled selected hidden>Obstacle Pattern</option> <!--Setting placeholder but hiding it to make it an unselectable option-->
-        <option value="dijkstra">Dijkstra's</option>
-        <option value="a-star">A*</option>
-        <option value="d*-lite">D* Lite</option>
+        <option value="">No Obstacle Pattern</option>
+        <option value="recursive-division">Recursive Pattern</option>
+        <option value="random-maze">Random Maze</option>
       </select>
 
       <select name="visualization-speed-selector" id="visualization-speed-selector">
         <option value="" disabled selected hidden>Visualization Speed</option> <!--Setting placeholder but hiding it to make it an unselectable option-->
-        <option value="dijkstra">Dijkstra's</option>
-        <option value="a-star">A*</option>
-        <option value="d*-lite">D* Lite</option>
+        <option value="fast">Fast</option>
+        <option value="medium">Medium</option>
+        <option value="slow">Slow</option>
       </select>
-
-      <button id="reset-board">Reset Board</button>
+      
+      <button id="visualize-btn">Visualize</button>
+      <button id="reset-board-btn">Reset Board</button>
 
     </div>
 

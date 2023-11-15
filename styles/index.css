@@ -23,8 +23,9 @@
 
   /* Colors */
   --dark-blue: #34495E;
-  --darker-blue: #0C151D;
   --light-blue: #4D6A99;
+  --light-green: #1ABC9C;
+  --dark-red: #B90F0F;
 
   /*Dimensions */
   --header-height: 7vh;
@@ -44,6 +45,6 @@
   font-weight: bold;
   font-size: 1.5rem;
 
-  background-color: var(--darker-blue);
+  background-color: var(--dark-blue);
   color: var(--light-color);
 }

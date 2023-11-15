@@ -14,7 +14,7 @@ header {
 .app-title {
   font-size: 1.20rem;
   font-weight: bold;
-  margin-right: 10%;
+  margin-right: 20%;
 }
 
 .control-inputs{
@@ -29,4 +29,50 @@ header {
 #visualization-speed-selector{
   margin-right: 20px;
 }
+
+
+.control-inputs > select,
+.control-inputs > button{
+  height: var(--header-height);
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 0.90rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.control-inputs > select:hover{
+  color: var(--light-green);
+}
+
+.control-inputs>select:after {
+  color: blue;
+}
+
+.control-inputs > select > option{
+  color: black;
+}
+
+.control-inputs > button{
+  height: calc(var(--header-height) - 10px);
+  border-radius: 5px;
+}
+
+
+#visualize-btn{
+  background-color: var(--light-green);
+  margin-right: 10px;
+}
+
+#visualize-btn:active,
+#reset-board-btn:active {
+  background-color: var(--dark-blue);
+}
+
+#reset-board-btn{
+  background-color: var(--dark-red);
+}
+
 
