@@ -25,8 +25,8 @@
   --dark-blue: #34495E;
   --light-blue: #4D6A99;
   --light-green: #1ABC9C;
-  --dark-red: #B90F0F;
-  --yellow: #ffc1079f;
+  --dark-red: #8b0023;
+  --yellow: #8C730C;
 
   /*Dimensions */
   --header-height: 7vh;
@@ -35,9 +35,6 @@
 body{
   background-color: black;
 }
-
-
-
 
 
 /* Default Styling for Small-Screen Devices */
