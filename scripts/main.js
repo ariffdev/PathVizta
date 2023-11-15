@@ -1,5 +1,5 @@
-import blockMobile from './blockMobile.js'
-import {generateWorldGrid, readWorldGridState} from './gridUtilities.js'
+import blockMobile from './utilities/blockMobile.js'
+import {renderWorldGrid, readWorldGridState} from './grid/gridUtilities.js'
 
 const grid_parameters = {
   //do not exceed 20 rows and 54 columns
@@ -9,4 +9,7 @@ const grid_parameters = {
 }
 
 //blockMobile(); // Block functionality on mobile devices
-let worldGridState = generateWorldGrid(grid_parameters.rows, grid_parameters.columns, grid_parameters.gridSquareSize); 
+let worldGridState = renderWorldGrid(grid_parameters.rows, grid_parameters.columns, grid_parameters.gridSquareSize); 
+
+
+worldGridState = readWorldGridState(grid_parameters.rows, grid_parameters.columns)

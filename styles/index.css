@@ -28,7 +28,6 @@
 
   /*Dimensions */
   --header-height: 7vh;
-  --main-height: calc(100vh - var(--header-height));
 }
 
 
