@@ -4,7 +4,7 @@ const blockSmallScreens = () => {
     document.body.innerHTML = 
     `
     <h1 class='Small-Screen'> 
-      Small-Screen Devices Not Supported
+      Small Screens Not Supported
     </h1>
     `
   }

@@ -10,7 +10,7 @@ const worldGridParameters = {
   'defaultGoalCell': {'row': 10, 'column': 35}
 }
 
-//blockSmallScreens(); // Block functionality on Small-Screen devices
+blockSmallScreens(); // Block functionality on Small-Screen devices
 renderWorldGrid(worldGridParameters); 
 
 
