@@ -57,18 +57,17 @@ header {
 
 .control-inputs > button{
   height: calc(var(--header-height) - 10px);
+  margin-right: 10px;
   border-radius: 5px;
 }
 
 
 #visualize-btn{
   background-color: var(--light-green);
-  margin-right: 10px;
 }
 
 #reset-board-btn {
   background-color: var(--dark-red);
-  margin-right: 10px;
 }
 
 #compare-algos-btn {
