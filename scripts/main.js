@@ -7,11 +7,11 @@ const worldGridParameters = {
   'columns': 54,
   'gridSquareSize': 30, //px
   'defaultStartCell': {'row': 10, 'column': 20},
-  'defaultGoalCell': {'row': 10, 'column': 25}
+  'defaultGoalCell': {'row': 10, 'column': 35}
 }
 
 //blockMobile(); // Block functionality on mobile devices
-let worldGridState = renderWorldGrid(worldGridParameters); 
+renderWorldGrid(worldGridParameters); 
 
 
-worldGridState = readWorldGridState(worldGridParameters)
+let worldGridState = readWorldGridState(worldGridParameters)
