@@ -68,15 +68,22 @@ header {
 
 #reset-board-btn {
   background-color: var(--dark-red);
+  margin-right: 200px;
 }
 
 #compare-algos-btn {
   background-color: var(--yellow);
 }
 
+#toggle-theme-btn{
+  background-color: black;
+  color: white;
+}
+
 #visualize-btn:active,
 #reset-board-btn:active,
-#compare-algos-btn:active {
+#compare-algos-btn:active,
+#toggle-theme-btn:active{
   background-color: var(--dark-blue);
 }
 

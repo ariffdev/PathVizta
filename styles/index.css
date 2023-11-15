@@ -32,12 +32,16 @@
   --header-height: 7vh;
 }
 
+body{
+  background-color: black;
+}
 
 
 
 
-/* Default Styling for Mobile Devices */
-.Mobile {
+
+/* Default Styling for Small-Screen Devices */
+.Small-Screen {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -47,5 +51,5 @@
   font-size: 1.5rem;
 
   background-color: var(--dark-blue);
-  color: var(--light-color);
+  color: white;
 }

@@ -1,4 +1,4 @@
-import blockMobile from './utilities/blockMobile.js'
+import blockSmallScreens from './utilities/blockSmallScreens.js'
 import {renderWorldGrid, readWorldGridState} from './grid/gridUtilities.js'
 
 const worldGridParameters = {
@@ -10,7 +10,7 @@ const worldGridParameters = {
   'defaultGoalCell': {'row': 10, 'column': 35}
 }
 
-//blockMobile(); // Block functionality on mobile devices
+//blockSmallScreens(); // Block functionality on Small-Screen devices
 renderWorldGrid(worldGridParameters); 
 
 
