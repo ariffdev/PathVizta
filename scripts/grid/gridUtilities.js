@@ -14,9 +14,18 @@ export function renderWorldGrid(worldGridParameters){
       const gridItem = document.createElement('div');
       gridItem.setAttribute('class', 'grid-item')
       gridItem.setAttribute('id', `${row}-${column}`);
-      gridItem.setAttribute('data-celltype', 'empty'); // set all cell types to 'empty' by default
       gridItem.style.height = worldGridParameters.gridSquareSize;
       gridItem.style.width = worldGridParameters.gridSquareSize;
+      
+      if(row === worldGridParameters.defaultStartCell.row & column === worldGridParameters.defaultStartCell.column){
+        gridItem.setAttribute('data-celltype', 'start'); // initialize default start cell
+        gridItem.innerText = '💙';
+      }else if(row === worldGridParameters.defaultGoalCell.row & column === worldGridParameters.defaultGoalCell.column){
+        gridItem.setAttribute('data-celltype', 'goal'); // initialize default goal cell
+        gridItem.innerText = '🎯';
+      }else{
+        gridItem.setAttribute('data-celltype', 'empty'); // initialize all other cells as empty
+      }
       worldGrid.appendChild(gridItem);
       worldGrid.style.gridTemplateColumns = (String(worldGridParameters.gridSquareSize) + "px ").repeat(worldGridParameters.columns)
     }
