@@ -64,9 +64,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
-
-
-.firebase
-firebase.json
 .firebaserc
+firebase.json
 404.html
