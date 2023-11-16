@@ -19,10 +19,10 @@ export function renderWorldGrid(worldGridParameters){
       
       if(row === worldGridParameters.defaultStartCell.row & column === worldGridParameters.defaultStartCell.column){
         gridItem.setAttribute('data-celltype', 'start'); // initialize default start cell
-        gridItem.innerText = '💙';
+        gridItem.innerHTML = worldGridParameters.startCellIcon;
       }else if(row === worldGridParameters.defaultGoalCell.row & column === worldGridParameters.defaultGoalCell.column){
         gridItem.setAttribute('data-celltype', 'goal'); // initialize default goal cell
-        gridItem.innerText = '🎯';
+        gridItem.innerHTML = worldGridParameters.goalCellIcon;
       }else{
         gridItem.setAttribute('data-celltype', 'empty'); // initialize all other cells as empty
       }

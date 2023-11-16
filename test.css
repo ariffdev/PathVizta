@@ -1,0 +1,9 @@
+.target-img{
+  height: 30px;
+}
+
+.target-img-svg{
+  height: 30px;
+  fill: green;
+  background-color: blue;
+}

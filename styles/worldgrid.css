@@ -25,3 +25,13 @@
   font-size: 1.5rem;
   background-color: var(--dark-blue);
 }
+
+.grid-item:hover{
+  background-color: black;
+}
+
+
+.start-cell-icon,
+.goal-cell-icon{
+  fill: white; /*Change to var(--dark-blue) in light mode*/
+}
