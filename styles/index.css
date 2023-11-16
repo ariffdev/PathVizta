@@ -31,8 +31,25 @@
   --header-height: 7vh;
 }
 
+:root,
+:root.dark{
+  --header-color: var(--dark-blue);
+  --header-text-color: white;
+  --body-color: black;
+  --body-text-color: white;
+  --world-grid-color: var(--dark-blue);
+  --grid-icons-color: white;
+}
+
+:root.light{
+  --body-color: white;
+  --body-text-color: var(--dark-blue);
+  --world-grid-color: white;
+  --grid-icons-color: var(--dark-blue);
+}
+
 body{
-  background-color: black;
+  background-color: var(--body-color);
 }
 
 

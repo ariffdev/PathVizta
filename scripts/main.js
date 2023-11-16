@@ -1,5 +1,6 @@
 import blockSmallScreens from './utilities/blockSmallScreens.js'
 import {renderWorldGrid, readWorldGridState} from './grid/gridUtilities.js'
+import './utilities/theme.js'
 
 const worldGridParameters = {
   //do not exceed 20 rows and 54 columns

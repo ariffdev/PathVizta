@@ -23,7 +23,7 @@
   justify-content: center;
 
   font-size: 1.5rem;
-  background-color: var(--dark-blue);
+  background-color: var(--world-grid-color);
 }
 
 .grid-item:hover{
@@ -33,5 +33,5 @@
 
 .start-cell-icon,
 .goal-cell-icon{
-  fill: white; /*Change to var(--dark-blue) in light mode*/
+  fill: var(--grid-icons-color); /*Change to var(--dark-blue) in light mode*/
 }
