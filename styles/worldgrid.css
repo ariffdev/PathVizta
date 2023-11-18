@@ -26,9 +26,6 @@
   background-color: var(--world-grid-color);
 }
 
-.grid-item:hover{
-  background-color: black;
-}
 
 
 .start-cell-icon,

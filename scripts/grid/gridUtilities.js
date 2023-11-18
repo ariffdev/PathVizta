@@ -47,3 +47,46 @@ export function readWorldGridState(worldGridParameters){
   }
   return currentWorldGridState;
 }
+
+  
+
+export function updateWorldGridState(){
+  let gridItems = document.getElementsByClassName('grid-item')
+  gridItems = Array.from(gridItems) //Create array from HTMLCollections object
+
+  let mouseDown = false;
+  document.body.onmousedown = () => (mouseDown = true);
+  document.body.onmouseup = () => (mouseDown = false);
+
+  gridItems.forEach((currentItem) => {
+    currentItem.addEventListener('mouseover', () => {
+      if(mouseDown === true){
+        if(currentItem.dataset.celltype === 'empty'){
+          currentItem.dataset.celltype = 'obstacle';
+          currentItem.style.backgroundColor = 'black';
+        }else if(currentItem.dataset.celltype = 'obstacle'){
+          currentItem.dataset.celltype = 'empty';
+          currentItem.style.backgroundColor = ''; //remove the style object and revert to default
+        }else{ //if start and goal cells, do nothing
+          null
+          console.log('doing nothing, man')
+        }
+      }
+      })
+    })
+
+    // Continue from here
+
+    // currentItem.addEventListener('mouseover', () => {
+    //     if(currentItem.dataset.celltype === 'empty'){
+    //       currentItem.dataset.celltype = 'obstacle';
+    //       currentItem.style.backgroundColor = 'black';
+    //     }else if(currentItem.dataset.celltype = 'obstacle'){
+    //       currentItem.dataset.celltype = 'empty';
+    //       currentItem.style.backgroundColor = ''; //remove the style object and revert to default
+    //     }else{ //if start and goal cells, do nothing
+    //       null
+    //       console.log('doing nothing, man')
+    //     }
+    //   })
+    }
