@@ -1,9 +1,11 @@
 import blockSmallScreens from './utilities/blockSmallScreens.js'
 import {renderWorldGrid, readWorldGridState, resetWorldGrid} from './grid/gridUtilities.js'
 import './utilities/theme.js' //to activate them toggling (this is enough to work since it executes on import)
+import { algorithmRunner } from './algorithms/algorithmRunner.js'
 
 
-const worldGridParameters = {
+
+export const worldGridParameters = {
   //do not exceed 20 rows and 54 columns
   'rows': 22,
   'columns': 54,
@@ -20,23 +22,23 @@ const worldGridParameters = {
 renderWorldGrid(worldGridParameters); // Initial rendering of world grid
 document.getElementById('reset-world-grid-btn').addEventListener('click', () => resetWorldGrid(worldGridParameters));
 
-var worldGridState;
-
-document.getElementById('visualize-btn').addEventListener('click', () =>{
-  // read all data and send to algorithm runner
-  worldGridState = readWorldGridState(worldGridParameters);
-  //console.log(worldGridState)
-})
 
 
+document.getElementById('visualize-btn').addEventListener('click', () => {
+  let inputData = {};
 
+  //defining accessors for input data
+  const algorithmSelector = document.getElementById('algo-selector');
+  const visualizationSpeedSelector = document.getElementById('visualization-speed-selector');
 
+  // read all data to be sent to algorithm runner
+  inputData['algorithmChoice'] = algorithmSelector.value;
+  inputData['visualizationSpeed'] = visualizationSpeedSelector.value;
+  inputData['worldGridState'] = readWorldGridState(worldGridParameters);
 
-// let worldGridState = readWorldGridState(worldGridParameters)
+  algorithmRunner(inputData);
 
-//activateDragAndDrop(worldGridState); // must be called after rendering the grid
-
-// Consider a game loop idea for the main function
+});
 
 
 
