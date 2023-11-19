@@ -13,6 +13,6 @@ export function activateDragAndDrop(worldGridState){
 
 
   function dragStart(e){
-    console.log('drag starts...')
+    //console.log('drag starts...')
   }
 }

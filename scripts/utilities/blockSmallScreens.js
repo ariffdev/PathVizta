@@ -1,7 +1,6 @@
 
 const blockSmallScreens = () => {
   if(document.documentElement.offsetWidth < 1600){
-    console.log('Blocking')
     document.body.innerHTML = 
     `
     <h1 class='Small-Screen'> 

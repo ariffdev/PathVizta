@@ -31,4 +31,6 @@
 .start-cell-icon,
 .goal-cell-icon{
   fill: var(--grid-icons-color); /*Change to var(--dark-blue) in light mode*/
+  height: 30px;
+  width: 30px;
 }
