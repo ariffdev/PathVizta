@@ -30,6 +30,7 @@ export function renderWorldGrid(worldGridParameters){
       worldGrid.style.gridTemplateColumns = (String(worldGridParameters.gridSquareSize) + "px ").repeat(worldGridParameters.columns)
     }
   }
+  allowObstacleDrawing(); // allow obstacle drawing
 }
 
 
@@ -48,58 +49,41 @@ export function readWorldGridState(worldGridParameters){
   return currentWorldGridState;
 }
 
-    function drawObstacles(){
-      let gridItems = document.getElementsByClassName('grid-item')
-      gridItems = Array.from(gridItems) //Create array from HTMLCollections object
+export function allowObstacleDrawing(){
+  let gridItems = document.getElementsByClassName('grid-item')
+  gridItems = Array.from(gridItems) //Create array from HTMLCollections object
 
 
-      let drawObstaclesActive = false;
-      document.body.onmousedown = () => (drawObstaclesActive = !drawObstaclesActive); // Start drawing from a click and stop when there is another click
+  let drawObstaclesActive = false;
+  document.getElementById('world-grid-container').onmousedown = () => (drawObstaclesActive = !drawObstaclesActive); // Start drawing from a click and stop when there is another click
 
-      gridItems.forEach((currentItem) => {
-        currentItem.addEventListener('mouseover', () => {
-          if(drawObstaclesActive === true){
-            if(currentItem.dataset.celltype === 'empty'){
-              currentItem.dataset.celltype = 'obstacle';
-              currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--obstacle-color'); // get obstacle color from stylesheet
-            }else if(currentItem.dataset.celltype = 'obstacle'){
-              currentItem.dataset.celltype = 'empty';
-              currentItem.style.backgroundColor = ''; //remove the style object and revert to default
-            }else{ //if start and goal cells, do nothing
-              null
-              console.log('doing nothing, man')
-            }
-          }
-          })
-        })
-      } 
+  gridItems.forEach((currentItem) => {
+    currentItem.addEventListener('mouseover', () => {
+      if(drawObstaclesActive === true){
+        if(currentItem.dataset.celltype === 'empty'){
+          currentItem.dataset.celltype = 'obstacle';
+          currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--obstacle-color'); // get obstacle color from stylesheet
+        }else if(currentItem.dataset.celltype = 'obstacle'){
+          currentItem.dataset.celltype = 'empty';
+          currentItem.style.backgroundColor = ''; //remove the style object and revert to default
+        }else{ //if start and goal cells, do nothing
+          null
+          console.log('doing nothing, man')
+        }
+      }
+      })
+    })
+  } 
 
-export function updateWorldGridState(){
-  // let gridItems = document.getElementsByClassName('grid-item')
-  // gridItems = Array.from(gridItems) //Create array from HTMLCollections object
+  export function resetWorldGrid(worldGridParameters){
+    const worldGridContainer = document.getElementById('world-grid-container');
+    worldGridContainer.innerHTML = ''; //removing all grid-container children
+    renderWorldGrid(worldGridParameters); //re-rendering world grid
+  }
 
 
-  // let drawObstaclesActive = false;
-  // document.body.onmousedown = () => (drawObstaclesActive = !drawObstaclesActive); // Start drawing from a click and stop when there is another click
 
-  // gridItems.forEach((currentItem) => {
-  //   currentItem.addEventListener('mouseover', () => {
-  //     if(drawObstaclesActive === true){
-  //       if(currentItem.dataset.celltype === 'empty'){
-  //         currentItem.dataset.celltype = 'obstacle';
-  //         currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--obstacle-color'); // get obstacle color from stylesheet
-  //       }else if(currentItem.dataset.celltype = 'obstacle'){
-  //         currentItem.dataset.celltype = 'empty';
-  //         currentItem.style.backgroundColor = ''; //remove the style object and revert to default
-  //       }else{ //if start and goal cells, do nothing
-  //         null
-  //         console.log('doing nothing, man')
-  //       }
-  //     }
-  //     })
-  //   })
-    drawObstacles();
-    }
+
 
 
 

@@ -64,7 +64,7 @@ header {
   background-color: var(--light-green);
 }
 
-#reset-board-btn {
+#reset-world-grid-btn {
   background-color: var(--dark-red);
   margin-right: 200px;
 }
@@ -79,7 +79,7 @@ header {
 }
 
 #visualize-btn:active,
-#reset-board-btn:active,
+#reset-world-grid-btn:active,
 #compare-algos-btn:active,
 #toggle-theme-btn:active{
   background-color: var(--dark-blue);

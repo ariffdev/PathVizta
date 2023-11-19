@@ -1,5 +1,5 @@
 import blockSmallScreens from './utilities/blockSmallScreens.js'
-import {renderWorldGrid, readWorldGridState, updateWorldGridState} from './grid/gridUtilities.js'
+import {renderWorldGrid, readWorldGridState, allowObstacleDrawing, resetWorldGrid} from './grid/gridUtilities.js'
 import './utilities/theme.js' //to activate them toggling (this is enough to work since it executes on import)
 import { activateDragAndDrop } from './utilities/dragdrop.js' //activate dragdrop
 
@@ -17,13 +17,24 @@ const worldGridParameters = {
 
 
 //blockSmallScreens(); // Block functionality on Small-Screen devices
-renderWorldGrid(worldGridParameters); 
-let worldGridState = readWorldGridState(worldGridParameters)
-// console.log(worldGridState)
-updateWorldGridState()
+renderWorldGrid(worldGridParameters); // Initial rendering of world grid
+document.getElementById('reset-world-grid-btn').addEventListener('click', () => resetWorldGrid(worldGridParameters));
+
+var worldGridState;
+
+document.getElementById('visualize-btn').addEventListener('click', () =>{
+  // read all data and send to algorithm runner
+  worldGridState = readWorldGridState(worldGridParameters);
+  console.log(worldGridState)
+})
+
+
+
+// let worldGridState = readWorldGridState(worldGridParameters)
+
 //activateDragAndDrop(worldGridState); // must be called after rendering the grid
 
-
+// Consider a game loop idea for the main function
 
 
 
