@@ -1,7 +1,7 @@
 import blockSmallScreens from './utilities/blockSmallScreens.js'
 import {renderWorldGrid, readWorldGridState, resetWorldGrid} from './grid/gridUtilities.js'
 import './utilities/theme.js' //to activate them toggling (this is enough to work since it executes on import)
-import { activateDragAndDrop } from './utilities/dragdrop.js' //activate dragdrop
+
 
 const worldGridParameters = {
   //do not exceed 20 rows and 54 columns
