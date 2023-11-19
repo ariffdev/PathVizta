@@ -51,63 +51,6 @@ export function readWorldGridState(worldGridParameters){
   return currentWorldGridState;
 }
 
-// function allowObstacleDrawing(){
-//   let gridItems = document.getElementsByClassName('grid-item')
-//   gridItems = Array.from(gridItems) //Create array from HTMLCollections object
-
-
-//   let drawObstaclesActive = false;
-//   document.getElementById('world-grid-container').onmousedown = () => (drawObstaclesActive = !drawObstaclesActive); // Start drawing from a click and stop when there is another click
-
-//   gridItems.forEach((currentItem) => {
-//     currentItem.addEventListener('mouseover', (event) => {
-//       if(drawObstaclesActive === true){ // && event.id.target.id !== 'start-cell-icon' && event.target.id !== 'goal-cell-icon'
-//         if(currentItem.dataset.celltype === 'empty'){
-//           currentItem.dataset.celltype = 'obstacle';
-//           currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--obstacle-color'); // get obstacle color from stylesheet
-//         }else if(currentItem.dataset.celltype = 'obstacle'){
-//           currentItem.dataset.celltype = 'empty';
-//           currentItem.style.backgroundColor = ''; //remove the style object and revert to default
-//         }else{ //if start and goal cells, do nothing
-//           null
-//         }
-//       }
-//       })
-//     })
-//   } 
-
-
-// function allowMovingStartAndGoalCells(){
-//   let gridItems = document.getElementsByClassName('grid-item')
-//   gridItems = Array.from(gridItems) //Create array from HTMLCollections object
-
-
-//   let moveStartCell = false;
-//   let moveGoalCell = false;
-
-//   document.getElementById('start-cell-icon').onmousedown = (event) => {
-//     document.getElementById('start-cell-icon').parentNode.setAttribute('data-celltype', 'empty'); //change state of old start cell
-//     document.getElementById('start-cell-icon').parentNode.innerHTML = ''; //empty contents of old start cell
-//     moveStartCell = true; // Move start cell from a click and to where the next click happens
-//   }
-
-//   if(moveStartCell === true){
-//     gridItems.forEach((currentItem) => {
-//       currentItem.addEventListener('click', () => {
-//           if(currentItem.dataset.celltype === 'empty'){
-//             currentItem.dataset.celltype = 'start';
-//             currentItem.style.backgroundColor = 'green'; // get obstacle color from stylesheet
-//             moveStartCell = false;
-//           }else if(currentItem.dataset.celltype = 'obstacle'){
-//             currentItem.dataset.celltype = 'empty';
-//             currentItem.style.backgroundColor = ''; //remove the style object and revert to default
-//           }else{ //if start and goal cells, do nothing
-//             null
-//           }
-//         })
-//       })
-//     }
-// }
 
 function allowObstacleDrawingAndMovingStartAndGoalCells(worldGridParameters){
   let gridItems = document.getElementsByClassName('grid-item')
@@ -141,7 +84,7 @@ function allowObstacleDrawingAndMovingStartAndGoalCells(worldGridParameters){
       if(drawObstaclesActive === true){ // && event.id.target.id !== 'start-cell-icon' && event.target.id !== 'goal-cell-icon'
         if(currentItem.dataset.celltype === 'empty'){
           currentItem.dataset.celltype = 'obstacle';
-          currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--obstacle-color'); // get obstacle color from stylesheet
+          currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--obstacle-color'); // set to obstacle color from stylesheet
         }else if(currentItem.dataset.celltype = 'obstacle'){
           currentItem.dataset.celltype = 'empty';
           currentItem.style.backgroundColor = ''; //remove the style object and revert to default
@@ -154,12 +97,14 @@ function allowObstacleDrawingAndMovingStartAndGoalCells(worldGridParameters){
     // For updating start or goal cell
     currentItem.addEventListener('click', () => { //clicked on new start cell
       if(moveStartCell === true){
-        currentItem.dataset.celltype = 'start';
+        currentItem.setAttribute('data-celltype', 'start');
         currentItem.innerHTML = worldGridParameters.startCellIcon;
+        currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--world-grid-color'); // set to world grid  color from stylesheet
         drawObstaclesActive = false; // to avoid pre-mature obstacle drawing
         moveStartCell = false; //disable to prevent duplicate start cells
       }else if(moveGoalCell === true){
-        currentItem.dataset.celltype = 'goal';
+        currentItem.setAttribute('data-celltype', 'goal');
+        currentItem.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--world-grid-color'); // set to world grid  color from stylesheet
         currentItem.innerHTML = worldGridParameters.goalCellIcon;
         drawObstaclesActive = false; // to avoid pre-mature obstacle drawing
         moveGoalCell = false; //disable to prevent duplicate start cells
