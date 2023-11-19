@@ -13,7 +13,8 @@ Expected Outputs:
 `
 
 
-export function aStar(worldGridState){
+export function aStar(inputData){
+  let worldGridState = inputData.worldGridState;
 
 
 

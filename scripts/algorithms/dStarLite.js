@@ -13,7 +13,8 @@ Expected Outputs:
 `
 
 
-export function dStarLite(worldGridState){
+export function dStarLite(inputData){
+  let worldGridState = inputData.worldGridState;
 
 
 

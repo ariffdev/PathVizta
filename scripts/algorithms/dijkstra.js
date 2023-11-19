@@ -13,7 +13,8 @@ Expected Outputs:
 `
 
 
-export function dijkstra(worldGridState){
+export function dijkstra(inputData){
+  let worldGridState = inputData.worldGridState;
 
 
 
