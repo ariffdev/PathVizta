@@ -32,7 +32,7 @@ document.getElementById('visualize-btn').addEventListener('click', () => {
   const visualizationSpeedSelector = document.getElementById('visualization-speed-selector');
 
   // read all data to be sent to algorithm runner
-  inputData['algorithmChoice'] = algorithmSelector.value;
+  inputData['selectedAlgorithm'] = algorithmSelector.value;
   inputData['visualizationSpeed'] = visualizationSpeedSelector.value;
   inputData['worldGridState'] = readWorldGridState(worldGridParameters);
 
