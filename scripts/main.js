@@ -18,7 +18,7 @@ export const worldGridParameters = {
 
 
 
-//blockSmallScreens(); // Block functionality on Small-Screen devices
+blockSmallScreens(); // Block functionality on Small-Screen devices
 renderWorldGrid(worldGridParameters); // Initial rendering of world grid
 document.getElementById('reset-world-grid-btn').addEventListener('click', () => resetWorldGrid(worldGridParameters));
 
@@ -36,7 +36,15 @@ document.getElementById('visualize-btn').addEventListener('click', () => {
   inputData['visualizationSpeed'] = visualizationSpeedSelector.value;
   inputData['worldGridState'] = readWorldGridState(worldGridParameters);
 
-  algorithmRunner(inputData);
+  //Checking for required inputs
+  console.log(inputData.selectedAlgorithm);
+  if(!inputData.selectedAlgorithm){ //empty
+    alert('Please select an algorithm');
+  }else if(!inputData.visualizationSpeed){ //empty
+    alert('Please select a visualization speed');
+  }else{
+    algorithmRunner(inputData);
+  }
 
 });
 
