@@ -1,7 +1,8 @@
 header {
   background-color: var(--header-color);
   color: var(--header-text-color);
-  height: var(--header-height);
+  /* height: var(--header-height); */
+
 
 
   display: flex;
@@ -90,3 +91,30 @@ header {
 
 
 
+@media only screen and (max-width:1600px){
+  header{
+    width: 100vw;
+  }
+
+  .app-title {
+      margin-right: 2.5%;
+  }
+
+  #visualize-btn,
+  #reset-world-grid-btn,
+  #compare-algos-btn,
+  #toggle-theme-btn{
+    width: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #reset-world-grid-btn{
+    margin-right: 10px;
+  }
+  
+
+  
+}

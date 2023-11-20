@@ -18,7 +18,7 @@ export const worldGridParameters = {
 
 
 
-blockSmallScreens(); // Block functionality on Small-Screen devices
+//blockSmallScreens(); // Block functionality on Small-Screen devices
 renderWorldGrid(worldGridParameters); // Initial rendering of world grid
 document.getElementById('reset-world-grid-btn').addEventListener('click', () => resetWorldGrid(worldGridParameters));
 
