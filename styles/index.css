@@ -7,6 +7,7 @@
 /* Import other CSS files*/ 
 @import url('./header.css');
 @import url('./worldgrid.css');
+@import url('./instructions.css');
 
 /* Basic CSS Reset, Font Setups, Global, and Global CSS Variables */
 * {
@@ -59,6 +60,7 @@ body{
   background-color: var(--body-color);
   height: 100%;
   width: 100%;
+
 }
 
 
