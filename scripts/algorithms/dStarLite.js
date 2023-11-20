@@ -22,7 +22,6 @@ export function dStarLite(inputData){
   let worldGridState = inputData.worldGridState;
   let specialCells = inputData.specialCells;
 
-  console.log('Testing visualization engine')
 
   const exampleAlgorithmOutput = {
     'visitedCells':   [[10,20],[9,20],[11,20],[10,21],[10,22],[10,23],[10,24],[10,25],[10,26],[10,27],[10,28],[10,29],[10,30],[10,31],[10,32],[10,33],[10,34],[10,35]],

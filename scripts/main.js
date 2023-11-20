@@ -40,9 +40,7 @@ document.getElementById('visualize-btn').addEventListener('click', () => {
 
   //extract start and goal cell state from world grid state and append to input data
   inputData['specialCells'] = extractStartAndGoalCellsFromWorldGridState(inputData.worldGridState, worldGridParameters);
-
   //Checking for required inputs
-  console.log(inputData.selectedAlgorithm);
   if(!inputData.selectedAlgorithm){ //empty
     alert('Please select an algorithm');
   }else if(!inputData.visualizationSpeed){ //empty

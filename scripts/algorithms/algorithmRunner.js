@@ -3,7 +3,6 @@ import { dijkstra } from './dijkstra.js'
 import { dStarLite } from './dStarLite.js'
 
 export function algorithmRunner(inputData){
-  console.log(inputData);
 
 
   switch(inputData.selectedAlgorithm) {
