@@ -1,0 +1,38 @@
+
+
+
+
+
+.animated-shortest-path-cell{
+  animation-name: animateShortedstPath;
+}
+
+
+@keyframes animateVisitedCell{
+  from {
+    transform: scale(1.5);
+  }
+
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes animateShortestPath {
+  from {
+    background-color: green;
+    transform: scale(0);
+  }
+
+  50% {
+    background-color: pink;
+    transform: scale(2);
+  }
+
+  to {
+    background-color: yellow;
+    transform: scale(0);
+  }
+}

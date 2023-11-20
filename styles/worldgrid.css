@@ -28,8 +28,6 @@
   background-color: var(--world-grid-color);
 }
 
-
-
 .start-cell-icon,
 .goal-cell-icon{
   fill: var(--grid-icons-color); /*Change to var(--dark-blue) in light mode*/
