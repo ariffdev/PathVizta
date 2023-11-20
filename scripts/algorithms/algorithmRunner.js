@@ -8,13 +8,13 @@ export function algorithmRunner(inputData){
 
   switch(inputData.selectedAlgorithm) {
     case 'dijkstra':
-      dijkstra(inputData.worldGridState);
+      dijkstra(inputData);
       break;
     case 'a-star':
-      aStar(inputData.worldGridState);
+      aStar(inputData);
       break;
     case 'd-star-lite':
-      dStarLite(inputData.worldGridState);
+      dStarLite(inputData);
       break;
   }
 }

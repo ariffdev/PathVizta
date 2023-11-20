@@ -31,8 +31,6 @@ export function renderWorldGrid(worldGridParameters){
       worldGrid.style.gridTemplateColumns = (String(worldGridParameters.gridSquareSize) + "px ").repeat(worldGridParameters.columns)
     }
   }
-  // allowObstacleDrawing(); // allow obstacle drawing
-  // allowMovingStartAndGoalCells(); //allow moving start and goal cells
   allowObstacleDrawingAndMovingStartAndGoalCells(worldGridParameters);
 }
 
@@ -125,6 +123,21 @@ export function resetWorldGrid(worldGridParameters){
   const worldGridContainer = document.getElementById('world-grid-container');
   worldGridContainer.innerHTML = ''; //removing all grid-container children
   renderWorldGrid(worldGridParameters); //re-rendering world grid
+}
+
+
+export function extractStartAndGoalCellsFromWorldGridState(worldGridState, worldGridParameters){
+  let specialCells = {}
+  for (let row = 0; row < worldGridParameters.rows; row++ ){
+    for (let column = 0; column < worldGridParameters.columns; column++ ){
+      if(worldGridState[row][column] === 'start'){
+        specialCells['start'] = [row,column];
+      }else if(worldGridState[row][column] === 'goal'){
+        specialCells['goal'] = [row,column];
+      }
+    }
+  }
+  return specialCells;
 }
 
 

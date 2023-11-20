@@ -1,5 +1,5 @@
 import blockSmallScreens from './utilities/blockSmallScreens.js'
-import {renderWorldGrid, readWorldGridState, resetWorldGrid} from './grid/gridUtilities.js'
+import {renderWorldGrid, readWorldGridState, resetWorldGrid, extractStartAndGoalCellsFromWorldGridState } from './grid/gridUtilities.js'
 import './utilities/theme.js' //to activate them toggling (this is enough to work since it executes on import)
 import { algorithmRunner } from './algorithms/algorithmRunner.js'
 
@@ -31,10 +31,15 @@ document.getElementById('visualize-btn').addEventListener('click', () => {
   const algorithmSelector = document.getElementById('algo-selector');
   const visualizationSpeedSelector = document.getElementById('visualization-speed-selector');
 
+
+
   // read all data to be sent to algorithm runner
   inputData['selectedAlgorithm'] = algorithmSelector.value;
   inputData['visualizationSpeed'] = visualizationSpeedSelector.value;
   inputData['worldGridState'] = readWorldGridState(worldGridParameters);
+
+  //extract start and goal cell state from world grid state and append to input data
+  inputData['specialCells'] = extractStartAndGoalCellsFromWorldGridState(inputData.worldGridState, worldGridParameters);
 
   //Checking for required inputs
   console.log(inputData.selectedAlgorithm);

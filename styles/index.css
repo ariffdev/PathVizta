@@ -8,6 +8,7 @@
 @import url('./header.css');
 @import url('./worldgrid.css');
 @import url('./instructions.css');
+@import url('./visualization.css');
 
 /* Basic CSS Reset, Font Setups, Global, and Global CSS Variables */
 * {
