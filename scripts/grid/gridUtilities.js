@@ -1,3 +1,4 @@
+
 // Renders the world grid onto the DOM
 export function renderWorldGrid(worldGridParameters){
   // Creating accessor for the grid container
@@ -63,7 +64,9 @@ function allowObstacleDrawingAndMovingStartAndGoalCells(worldGridParameters){
 
 
   document.getElementById('world-grid-container').onmousedown = (event) => {
-    console.log(event.target.id);
+    // Disable theme toggling
+    document.getElementById('toggle-theme-btn').style.display = 'none';
+
     // Logic to decide which of the three actions to activate
     if(event.target.id !== 'start-cell-icon' && event.target.id !== 'goal-cell-icon' && event.target.id !== 'start-cell-icon-path' && event.target.id !== 'goal-cell-icon-path'){
       drawObstaclesActive = !drawObstaclesActive;
@@ -117,6 +120,8 @@ function allowObstacleDrawingAndMovingStartAndGoalCells(worldGridParameters){
 
 
 export function resetWorldGrid(worldGridParameters){
+  // Re-enable theme toggling
+  document.getElementById('toggle-theme-btn').style.display = 'block';
   const worldGridContainer = document.getElementById('world-grid-container');
   worldGridContainer.innerHTML = ''; //removing all grid-container children
   renderWorldGrid(worldGridParameters); //re-rendering world grid
