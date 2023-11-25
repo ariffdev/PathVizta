@@ -4,11 +4,9 @@
 /* EB Garamond Font */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-/* Import other CSS files*/ 
+/* Import other CSS files*/
 @import url('./header.css');
-@import url('./worldgrid.css');
-@import url('./instructions.css');
-@import url('./visualization.css');
+
 
 
 /* Basic CSS Reset, Font Setups, Global, and Global CSS Variables */
@@ -35,12 +33,12 @@
   --header-height: 7vh;
 }
 
-html{
+html {
   width: 100%;
 }
 
 :root,
-:root.dark{
+:root.dark {
   --header-color: var(--dark-blue);
   --header-text-color: white;
   --body-color: black;
@@ -50,7 +48,7 @@ html{
   --obstacle-color: white;
 }
 
-:root.light{
+:root.light {
   --body-color: white;
   --body-text-color: var(--dark-blue);
   --world-grid-color: white;
@@ -58,7 +56,7 @@ html{
   --obstacle-color: var(--dark-blue);
 }
 
-body{
+body {
   background-color: var(--body-color);
   height: 100%;
   width: 100%;

@@ -22,6 +22,8 @@ export const worldGridParameters = {
 renderWorldGrid(worldGridParameters); // Initial rendering of world grid
 document.getElementById('reset-world-grid-btn').addEventListener('click', () => resetWorldGrid(worldGridParameters));
 
+document.getElementById('ev3-companion-btn').addEventListener('click', () => window.location.href = '../ev3-companion/ev3-companion.html') //switching to EV3 Companion
+
 
 
 document.getElementById('visualize-btn').addEventListener('click', () => {
