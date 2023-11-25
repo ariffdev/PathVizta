@@ -1,4 +1,5 @@
 
+
 export function visualizationRunner(algorithmOutput, inputData){
   let visualizationSpeed = inputData.visualizationSpeed;
 
@@ -47,7 +48,7 @@ function visualizeShortestPath(algorithmOutput, specialCells, visualizationSpeed
       setTimeout(()=> {
         document.getElementById(`${node[0]}-${node[1]}`).classList.add('animating-shortest-path');
       }, i*visualizationSpeed);
-    }    
+    } 
   })
 }
 
