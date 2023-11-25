@@ -1,4 +1,4 @@
-import { visualizationRunner } from '../visualisation/visualizationRunner.js'
+import { visualizationRunner } from '../visualization/visualizationRunner.js'
 
 `
 To be called in algorithmRunner() function from algorithmRunner.js

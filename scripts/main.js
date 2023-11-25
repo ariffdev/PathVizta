@@ -38,8 +38,11 @@ document.getElementById('visualize-btn').addEventListener('click', () => {
   inputData['visualizationSpeed'] = visualizationSpeedSelector.value;
   inputData['worldGridState'] = readWorldGridState(worldGridParameters);
 
+
   //extract start and goal cell state from world grid state and append to input data
   inputData['specialCells'] = extractStartAndGoalCellsFromWorldGridState(inputData.worldGridState, worldGridParameters);
+
+  console.log(inputData);
   //Checking for required inputs
   if(!inputData.selectedAlgorithm){ //empty
     alert('Please select an algorithm');
