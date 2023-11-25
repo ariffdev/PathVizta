@@ -48,6 +48,8 @@ html{
   --world-grid-color: var(--dark-blue);
   --grid-icons-color: white;
   --obstacle-color: white;
+  --visited-cell-color: violet;
+  --shortest-path-color: yellow;
 }
 
 :root.light{
@@ -56,6 +58,8 @@ html{
   --world-grid-color: white;
   --grid-icons-color: var(--dark-blue);
   --obstacle-color: var(--dark-blue);
+  --visited-cell-color: #40CEE3;
+  --shortest-path-color: #FFFE6A;
 }
 
 body{
