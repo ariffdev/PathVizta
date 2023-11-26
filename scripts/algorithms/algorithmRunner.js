@@ -7,7 +7,7 @@ export function algorithmRunner(inputData){
   // Freeze the grid state to stop user from making changes
   freezeGridChanges();
 
-
+  // Select algorithm
   switch(inputData.selectedAlgorithm) {
     case 'dijkstra':
       dijkstra(inputData);

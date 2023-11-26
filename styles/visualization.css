@@ -14,5 +14,10 @@
   /*transition duration here will have to be faster(less time, sprinter) than time set in script*/
 }
 
+.animating-maze-obstacle{
+    background-color: var(--obstacle-color);
+    transition: all 0.1s ease-in-out 0.25s;
+}
+
 
 

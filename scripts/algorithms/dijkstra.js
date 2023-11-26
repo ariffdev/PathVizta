@@ -23,3 +23,4 @@ export function dijkstra(inputData){
 
  // visualizationRunner(algorithmOutput, inputData); // Run the visualization. May need to wait for algorithm runner to finish? async await?
 }
+
