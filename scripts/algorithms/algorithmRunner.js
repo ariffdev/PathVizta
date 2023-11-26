@@ -1,8 +1,11 @@
 import { aStar } from './aStar.js'
 import { dijkstra } from './dijkstra.js'
 import { dStarLite } from './dStarLite.js'
+import { freezeGridChanges } from '../grid/gridUtilities.js';
 
 export function algorithmRunner(inputData){
+  // Freeze the grid state to stop user from making changes
+  freezeGridChanges();
 
 
   switch(inputData.selectedAlgorithm) {

@@ -16,7 +16,7 @@ header {
 .app-title {
   font-size: 1.20rem;
   font-weight: bold;
-  margin-right: 20%;
+  margin-right: 12.5%;
 }
 
 .control-inputs{
@@ -28,7 +28,8 @@ header {
 
 #algo-selector,
 #obstacle-pattern-selector,
-#visualization-speed-selector{
+#visualization-speed-selector,
+#maze-selector{
   margin-right: 20px;
 }
 

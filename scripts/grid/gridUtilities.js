@@ -118,6 +118,9 @@ function allowObstacleDrawingAndMovingStartAndGoalCells(worldGridParameters){
 
 
 export function resetWorldGrid(worldGridParameters){
+  // Unfreeze the grid state to allow user to make changes again
+  unfreezeGridChanges();
+
   // Re-enable theme toggling
   document.getElementById('toggle-theme-btn').style.display = 'block';
   const worldGridContainer = document.getElementById('world-grid-container');
@@ -142,7 +145,12 @@ export function extractStartAndGoalCellsFromWorldGridState(worldGridState, world
 
 
 
+export function freezeGridChanges(){
+  document.getElementById('world-grid-container').style.pointerEvents = 'none';
+}
 
 
-
+export function unfreezeGridChanges(){
+  document.getElementById('world-grid-container').style.pointerEvents = 'auto';
+}
 

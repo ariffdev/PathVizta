@@ -1,7 +1,9 @@
 import blockSmallScreens from './utilities/blockSmallScreens.js'
-import {renderWorldGrid, readWorldGridState, resetWorldGrid, extractStartAndGoalCellsFromWorldGridState } from './grid/gridUtilities.js'
+import {renderWorldGrid, readWorldGridState, resetWorldGrid, extractStartAndGoalCellsFromWorldGridState, freezeGridChanges, unfreezeGridChanges } from './grid/gridUtilities.js'
 import './utilities/theme.js' //to activate them toggling (this is enough to work since it executes on import)
 import { algorithmRunner } from './algorithms/algorithmRunner.js'
+import  { generateMaze } from './maze/mazeGenerator.js'
+
 
 
 
@@ -24,7 +26,10 @@ document.getElementById('reset-world-grid-btn').addEventListener('click', () => 
 
 document.getElementById('ev3-companion-btn').addEventListener('click', () => window.location.href = '../ev3-companion/ev3-companion.html') //switching to EV3 Companion
 
-
+document.getElementById('maze-selector').addEventListener('change', (event) => {
+  let selectedMaze = event.target.value;
+  generateMaze(selectedMaze);
+});
 
 document.getElementById('visualize-btn').addEventListener('click', () => {
   let inputData = {};
