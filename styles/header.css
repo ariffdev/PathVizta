@@ -1,7 +1,7 @@
 header {
   background-color: var(--header-color);
   color: var(--header-text-color);
-  /* height: var(--header-height); */
+  height: var(--header-height);
 
 
 
@@ -16,7 +16,7 @@ header {
 .app-title {
   font-size: 1.20rem;
   font-weight: bold;
-  margin-right: 12.5%;
+  margin-right: 10.5%;
 }
 
 .control-inputs{
@@ -30,7 +30,7 @@ header {
 #obstacle-pattern-selector,
 #visualization-speed-selector,
 #maze-selector{
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 
@@ -86,6 +86,7 @@ header {
 #toggle-theme-btn{
   background-color: var(--body-color);
   color: var(--body-text-color);
+  width: 120px;
 }
 
 #visualize-btn:active,
@@ -111,7 +112,6 @@ header {
   #reset-world-grid-btn,
   #compare-algos-btn,
   #toggle-theme-btn{
-    width: 100px;
 
     display: flex;
     align-items: center;
