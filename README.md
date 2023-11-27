@@ -4,3 +4,4 @@ PathVizta [CS453 Project]
 
 [Project Documentation](https://ariffdev.notion.site/PathVizta-ebe3327e21924cceb7aba69b8cd7abfd?pvs=4)
 
+![PathVizta Preview](pathvizta-preview.png)
