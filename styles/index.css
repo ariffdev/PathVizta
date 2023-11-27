@@ -40,16 +40,6 @@ html{
 }
 
 :root,
-:root.light {
-  --body-color: white;
-  --body-text-color: var(--dark-blue);
-  --world-grid-color: white;
-  --grid-icons-color: var(--dark-blue);
-  --obstacle-color: var(--dark-blue);
-  --visited-cell-color: #40CEE3;
-  --shortest-path-color: #FFFE6A;
-}
-
 :root.dark{
   --header-color: var(--dark-blue);
   --header-text-color: white;
@@ -62,7 +52,15 @@ html{
   --shortest-path-color: yellow;
 }
 
-
+:root.light{
+  --body-color: white;
+  --body-text-color: var(--dark-blue);
+  --world-grid-color: white;
+  --grid-icons-color: var(--dark-blue);
+  --obstacle-color: var(--dark-blue);
+  --visited-cell-color: #40CEE3;
+  --shortest-path-color: #FFFE6A;
+}
 
 body{
   background-color: var(--body-color);
