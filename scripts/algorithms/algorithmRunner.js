@@ -1,6 +1,5 @@
-import { aStar } from './aStar.js'
-import { dijkstra } from './dijkstra.js'
-import { dStarLite } from './dStarLite.js'
+import { useAStar } from './aStar.js'
+import { useDijkstra } from './dijkstra.js'
 import { freezeGridChanges } from '../grid/gridUtilities.js';
 
 export function algorithmRunner(inputData){
@@ -10,13 +9,10 @@ export function algorithmRunner(inputData){
   // Select algorithm
   switch(inputData.selectedAlgorithm) {
     case 'dijkstra':
-      dijkstra(inputData);
+      useDijkstra(inputData);
       break;
     case 'a-star':
-      aStar(inputData);
-      break;
-    case 'd-star-lite':
-      dStarLite(inputData);
+      useAStar(inputData);
       break;
   }
 }

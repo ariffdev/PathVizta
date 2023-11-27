@@ -24,12 +24,10 @@ export function simpleStairPattern(){
   currentCell = [20, 41] // [19, 42] to [1, 52]
   // Final diagonal (up and right).Stops when we hit (not including) topmost row (0) => {x-1, y+1}
   for(let j = 41 ; j < worldGridParameters.columns - 2; j++){
-    console.log(currentCell);
     currentCell = [currentCell[0] - 1, currentCell[1] + 1];
     obstacleArray.push(currentCell);
   }
 
-  //console.log(obstacleArray);
   return obstacleArray;
 }
 
