@@ -1,5 +1,5 @@
 // Set the default theme
-let currentTheme = 'dark';
+let currentTheme = 'light';
 // Add the current theme to the DOM
 document.documentElement.classList.add(currentTheme);
 
